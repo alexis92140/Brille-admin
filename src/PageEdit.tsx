@@ -12,7 +12,6 @@ const PageEdit = (props: ListProps) => (
     <SimpleForm>
       <NumberInput source="id" disabled />
       <TextInput source="name" />
-
       <NumberInput source="admin" />
     </SimpleForm>
   </Edit>

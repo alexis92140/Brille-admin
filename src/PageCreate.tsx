@@ -13,24 +13,24 @@ import {
 } from "react-admin";
 import { PostEditActions } from "./PostEditActions";
 
-const validateName: Validator[] = [required(), minLength(2), maxLength(200)];
+const validatePage: Validator[] = [required(), maxLength(255)];
 
 export default interface IPage {
   name: string;
 }
 
-const optionRenderer = (page: IPage) => `${page.name} `;
+const optionRenderer = (page: IPage) => ` ${page.name}`;
 
 export const PageCreate = (props: ListProps) => (
   <Create
-    title="Rajoutons une page"
+    title="Ajouter une page"
     actions={<PostEditActions />} // Rajoute des boutons personnalisés dans l'écran d'ajout
     {...props}
   >
     <SimpleForm warnWhenUnsavedChanges>
-      <TextInput source="page" validate={validateName} />
+      <TextInput source="name" validate={validatePage} />
 
-      <ReferenceInput source="idPage" reference="users" allowEmpty>
+      <ReferenceInput source="idPage" reference="pages" allowEmpty>
         {/* Ceci permet de faire une liste déroulante qui va aller afficher le résultat de la fonction optionRenderer : firstname lastname */}
         <SelectInput optionText={optionRenderer} />
       </ReferenceInput>
