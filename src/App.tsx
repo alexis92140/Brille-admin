@@ -16,6 +16,9 @@ import { PageCreate } from "./PageCreate";
 import { AddressEdit } from "./AddressEdit";
 import { ImageCreate } from "./ImageCreate";
 import { ParagraphCreate } from "./ParagraphCreate";
+import ProductList from './ProductList';
+import ProductEdit from './ProductEdit';
+import { ProductCreate } from './ProductCreate';
 
 const httpClient = (url: string, options: any = {}) => {
   if (!options.headers) {
@@ -57,7 +60,14 @@ const App = () => (
       edit={ParagraphEdit}
       create={ParagraphCreate}
     />
+    	<Resource
+			name='products'
+			list={ProductList}
+			edit={ProductEdit}
+			create={ProductCreate}
+		/>
   </Admin>
+
 );
 
 export default App;

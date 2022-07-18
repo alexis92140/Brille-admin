@@ -1,9 +1,9 @@
 import { AuthProvider } from "react-admin";
 
 type IUserInfo = {
-  id: string;
-  firstname: string;
-  admin: number;
+	id: string;
+	firstname: string;
+	admin: number;
 };
 
 const authProvider: AuthProvider = {
