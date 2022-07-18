@@ -16,7 +16,7 @@ export const ParagraphEdit = (props: ListProps) => (
       <NumberInput source="id" disabled />
       <TextInput source="title" validate={maxLength(255)} />
       <TextInput source="description" />
-      <NumberInput source="idImage" />
+
       <NumberInput source="idParagraph" />
     </SimpleForm>
   </Edit>

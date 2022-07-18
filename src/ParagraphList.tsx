@@ -23,7 +23,7 @@ const ParagraphList = (props: ListProps) => {
       <Datagrid rowClick="edit">
         <NumberField source="id" sortBy="paragraph.id" />
         <TextField source="title" />
-        <TextField source="idImage" />
+
         <TextField source="description" />
         <BooleanNumField source="admin" />
       </Datagrid>
