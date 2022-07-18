@@ -7,6 +7,7 @@ import {
   List,
   ListProps,
   NumberField,
+  ImageField,
   Record,
   TextField,
 } from "react-admin";
@@ -22,7 +23,7 @@ const ImageList = (props: ListProps) => {
     <List {...props}>
       <Datagrid rowClick="edit">
         <NumberField source="id" sortBy="images.id" />
-        <TextField source="image" />
+        <ImageField source="image" />
         <BooleanNumField source="admin" />
       </Datagrid>
     </List>
