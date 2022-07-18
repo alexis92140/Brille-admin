@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "prepare": "husky install"
+    
   },
   "dependencies": {
     "axios": "^0.25.0",
@@ -22,5 +22,17 @@
     "@vitejs/plugin-react": "^1.0.7",
     "typescript": "^4.4.4",
     "vite": "^2.7.2"
-  }
+  },
+  "description": "template project for react-admin with vite and typescript",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexis92140/Brille-admin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexis92140/Brille-admin/issues"
+  },
+  "homepage": "https://github.com/alexis92140/Brille-admin#readme"
 }
