@@ -7,7 +7,6 @@ import {
   List,
   ListProps,
   NumberField,
-  Record,
   TextField,
 } from "react-admin";
 import BooleanNumField from "./BooleanNumField.jsx";
@@ -17,21 +16,17 @@ type recordType = {
   id?: Identifier | undefined;
 };
 
-const UserList = (props: ListProps) => {
+const ParagraphList = (props: ListProps) => {
   return (
     <List {...props}>
       <Datagrid rowClick="edit">
-        <NumberField source="id" sortBy="users.id" />
-        <TextField source="firstname" />
-        <TextField source="lastname" />
-        <TextField source="phone" />
-        <EmailField source="email" />
-        <TextField source="created" />
-        <TextField source="modified" />
+        <NumberField sortBy="paragraph.id" />
+        <TextField source="title" />
+        <TextField source="description" />
         <BooleanNumField source="admin" />
       </Datagrid>
     </List>
   );
 };
 
-export default UserList;
+export default ParagraphList;
