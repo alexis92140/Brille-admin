@@ -7,7 +7,6 @@ import {
 } from 'react-admin';
 
 const AddressList = (props: ListProps) => (
-
   <List {...props}>
     <Datagrid rowClick="edit">
       <TextField source="id" />
@@ -25,7 +24,6 @@ const AddressList = (props: ListProps) => (
       </ReferenceField>
     </Datagrid>
   </List>
-
 );
 
 export default AddressList;
