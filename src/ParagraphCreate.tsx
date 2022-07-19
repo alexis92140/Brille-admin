@@ -25,7 +25,6 @@ const validateDescription: Validator[] = [
 export default interface IParagraph {
   title: string;
   idPage: number;
-
   description: string;
 }
 
@@ -41,7 +40,6 @@ export const ParagraphCreate = (props: ListProps) => (
     <SimpleForm warnWhenUnsavedChanges>
       <TextInput source="title" validate={validateTitle} />
       <TextInput source="idPage" validate={validatePage} />
-
       <TextInput source="description" validate={validateDescription} />
       <ReferenceInput source="idParagraph" reference="paragraphs" allowEmpty>
         {/* Ceci permet de faire une liste déroulante qui va aller afficher le résultat de la fonction optionRenderer : firstname lastname */}

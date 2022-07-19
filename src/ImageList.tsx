@@ -22,7 +22,7 @@ const ImageList = (props: ListProps) => {
   return (
     <List {...props}>
       <Datagrid rowClick="edit">
-        <NumberField source="id" sortBy="images.id" />
+        <NumberField sortBy="images.id" />
         <ImageField source="image" />
         <BooleanNumField source="admin" />
       </Datagrid>
