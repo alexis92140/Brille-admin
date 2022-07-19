@@ -1,3 +1,6 @@
+
+import NewslettersList from './NewslettersList';
+import NewslettersCreate from './NewslettersCreate';
 import * as React from "react";
 import { Admin, Resource, fetchUtils, EditGuesser } from "react-admin";
 import simpleRestProvider from "ra-data-simple-rest";
@@ -19,6 +22,7 @@ import { ParagraphCreate } from "./ParagraphCreate";
 import ProductList from './ProductList';
 import ProductEdit from './ProductEdit';
 import { ProductCreate } from './ProductCreate';
+
 
 const httpClient = (url: string, options: any = {}) => {
   if (!options.headers) {
@@ -42,6 +46,13 @@ const App = () => (
       edit={AddressEdit}
       create={AddressCreate}
     />
+
+     <Resource 
+     name="newsletters" 
+     list={NewslettersList} 
+     create={NewslettersCreate}
+      />
+
     <Resource
       name="pages"
       list={PageList}
@@ -66,6 +77,7 @@ const App = () => (
 			edit={ProductEdit}
 			create={ProductCreate}
 		/>
+
   </Admin>
 
 );
