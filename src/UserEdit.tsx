@@ -13,7 +13,10 @@ const UserEdit = (props: ListProps) => (
       <NumberInput source="id" disabled />
       <TextInput source="firstname" />
       <TextInput source="lastname" />
+      <TextInput source="phone" />
       <TextInput source="email" />
+      
+      
       <NumberInput source="admin" />
     </SimpleForm>
   </Edit>

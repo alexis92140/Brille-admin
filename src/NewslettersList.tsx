@@ -17,21 +17,17 @@ type recordType = {
   id?: Identifier | undefined;
 };
 
-const UserList = (props: ListProps) => {
+const NewslettersList = (props: ListProps) => {
   return (
     <List {...props}>
       <Datagrid rowClick="edit">
-        <NumberField source="id" sortBy="users.id" />
-        <TextField source="firstname" />
-        <TextField source="lastname" />
-        <TextField source="phone" />
+        <NumberField source="id" sortBy="newsletters.id" />
         <EmailField source="email" />
-        <TextField source="created" />
-        <TextField source="modified" />
         <BooleanNumField source="admin" />
       </Datagrid>
     </List>
   );
 };
-
-export default UserList;
+  
+  export default NewslettersList;
+  

@@ -11,10 +11,12 @@ const AddressList = (props: ListProps) => (
     <Datagrid rowClick="edit">
       <TextField source="id" />
       {/*  sortBy="addresses.id_address" /> */}
-      <TextField source="address1" />
-      <TextField source="address2" />
+      <TextField source="addressLine1" />
+      <TextField source="addressLine2" />
+      <TextField source="zipCode" />
       <TextField source="city" />
-      <TextField source="postalCode" />
+      <TextField source="country" />
+      
       <ReferenceField label="User" source="idUser" reference="users">
         <>
           <TextField source="firstname" /> <TextField source="lastname" />

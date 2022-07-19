@@ -7,6 +7,8 @@ import AddressList from './AddressList';
 import authProvider from './authProvider';
 import { AddressCreate } from './AddressCreate';
 import { AddressEdit } from './AddressEdit';
+import NewslettersList from './NewslettersList';
+import NewslettersCreate from './NewslettersCreate';
 
 const httpClient = (url: string, options: any = {}) => {
   if (!options.headers) {
@@ -30,6 +32,11 @@ const App = () => (
       edit={AddressEdit}
       create={AddressCreate}
     />
+     <Resource 
+     name="newsletters" 
+     list={NewslettersList} 
+     create={NewslettersCreate}
+      />
   </Admin>
 );
 
