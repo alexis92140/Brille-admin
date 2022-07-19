@@ -83,13 +83,13 @@ const App = () => (
 
     <Resource
       name="products"
-      // list={ProductList}
+      list={ProductList}
       edit={ProductEdit}
       create={ProductCreate}
     />
 
     <Resource
-      name="productOrders"
+      name="productorders"
       list={ProductOrdersList}
       edit={ProductOrdersEdit}
     />
