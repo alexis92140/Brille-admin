@@ -7,7 +7,6 @@ import {
   List,
   ListProps,
   NumberField,
-  ImageField,
   Record,
   TextField,
 } from "react-admin";
@@ -18,16 +17,17 @@ type recordType = {
   id?: Identifier | undefined;
 };
 
-const ImageList = (props: ListProps) => {
+const NewslettersList = (props: ListProps) => {
   return (
     <List {...props}>
       <Datagrid rowClick="edit">
-        <NumberField sortBy="images.id" />
-        <ImageField source="image" />
+        <NumberField source="id" sortBy="newsletters.id" />
+        <EmailField source="email" />
         <BooleanNumField source="admin" />
       </Datagrid>
     </List>
   );
 };
-
-export default ImageList;
+  
+  export default NewslettersList;
+  
