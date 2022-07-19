@@ -8,6 +8,7 @@ type IUserInfo = {
 
 const authProvider: AuthProvider = {
   login: (props) => {
+
     const request = new Request(
       "https://brille-handbags.herokuapp.com/api/login",
       {
@@ -19,6 +20,7 @@ const authProvider: AuthProvider = {
         headers: new Headers({ "Content-Type": "application/json" }),
       }
     );
+
     return fetch(request)
       .then((response) => {
         if (response.status === 401) {
