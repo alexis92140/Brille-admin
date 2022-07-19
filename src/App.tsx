@@ -21,6 +21,8 @@ import { ParagraphCreate } from "./ParagraphCreate";
 import ProductList from './ProductList';
 import ProductEdit from './ProductEdit';
 import { ProductCreate } from './ProductCreate';
+import OrderList from "./OrderList";
+import { OrderEdit } from "./OrderEdit";
 
 const httpClient = (url: string, options: any = {}) => {
   if (!options.headers) {
@@ -69,10 +71,15 @@ const App = () => (
     />
     	<Resource
 			name="products"
-			list={ProductList}
+			// list={ProductList}
 			edit={ProductEdit}
 			create={ProductCreate}
 		/>
+    <Resource 
+    name="orders" 
+    list={OrderList} 
+    edit={OrderEdit} 
+    />
   </Admin>
 
 );

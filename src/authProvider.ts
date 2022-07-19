@@ -8,13 +8,6 @@ type IUserInfo = {
 
 const authProvider: AuthProvider = {
   login: (props) => {
-<<<<<<< HEAD
-    const request = new Request('https://brille-handbags.herokuapp.com/api/login', {
-      method: 'POST',
-      body: JSON.stringify({ email: props.username, password: props.password }),
-      headers: new Headers({ 'Content-Type': 'application/json' }),
-    });
-=======
     const request = new Request(
       "https://brille-handbags.herokuapp.com/api/login",
       {
@@ -26,7 +19,6 @@ const authProvider: AuthProvider = {
         headers: new Headers({ "Content-Type": "application/json" }),
       }
     );
->>>>>>> c1557c775e7266d9d9dfcfe425a5a49b78eded73
     return fetch(request)
       .then((response) => {
         if (response.status === 401) {
