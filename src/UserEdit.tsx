@@ -1,13 +1,14 @@
 import {
-  Edit,
-  ListProps,
-  NumberInput,
-  SimpleForm,
-  TextInput,
-} from "react-admin";
-import { PostEditActions } from "./PostEditActions";
+	Edit,
+	ListProps,
+	NumberInput,
+	SimpleForm,
+	TextInput,
+} from 'react-admin';
+import { PostEditActions } from './PostEditActions';
 
 const UserEdit = (props: ListProps) => (
+
   <Edit {...props} actions={<PostEditActions />}>
     <SimpleForm>
       <NumberInput source="id" disabled />
@@ -20,6 +21,7 @@ const UserEdit = (props: ListProps) => (
       <NumberInput source="admin" />
     </SimpleForm>
   </Edit>
+
 );
 
 export default UserEdit;
