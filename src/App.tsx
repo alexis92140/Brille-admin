@@ -1,3 +1,6 @@
+
+import NewslettersList from './NewslettersList';
+import NewslettersCreate from './NewslettersCreate';
 import * as React from "react";
 import { Admin, Resource, fetchUtils, EditGuesser } from "react-admin";
 import simpleRestProvider from "ra-data-simple-rest";
@@ -27,6 +30,7 @@ import { AddressEdit } from "./AddressEdit";
 import { ImageCreate } from "./ImageCreate";
 import { ParagraphCreate } from "./ParagraphCreate";
 
+
 const httpClient = (url: string, options: any = {}) => {
   if (!options.headers) {
     options.headers = new Headers({ Accept: "application/json" });
@@ -49,6 +53,13 @@ const App = () => (
       edit={AddressEdit}
       create={AddressCreate}
     />
+
+     <Resource 
+     name="newsletters" 
+     list={NewslettersList} 
+     create={NewslettersCreate}
+      />
+
     <Resource
       name="pages"
       list={PageList}
