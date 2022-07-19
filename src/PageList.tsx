@@ -21,7 +21,7 @@ const PageList = (props: ListProps) => {
   return (
     <List {...props}>
       <Datagrid rowClick="edit">
-        <NumberField source="id" sortBy="pages.id" />
+        <NumberField sortBy="pages.id" />
         <TextField source="name" />
         <BooleanNumField source="admin" />
       </Datagrid>

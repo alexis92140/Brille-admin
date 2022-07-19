@@ -21,9 +21,8 @@ const ParagraphList = (props: ListProps) => {
   return (
     <List {...props}>
       <Datagrid rowClick="edit">
-        <NumberField source="id" sortBy="paragraph.id" />
+        <NumberField sortBy="paragraph.id" />
         <TextField source="title" />
-
         <TextField source="description" />
         <BooleanNumField source="admin" />
       </Datagrid>
