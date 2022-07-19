@@ -4,6 +4,11 @@ import simpleRestProvider from "ra-data-simple-rest";
 import UserList from "./UserList";
 import UserEdit from "./UserEdit";
 import ImageList from "./ImageList";
+import ProductList from "./ProductList";
+import ProductEdit from "./ProductEdit";
+import ProductOrdersList from "./ProductOrdersList";
+import ProductOrdersEdit from "./ProductOrdersEdit";
+
 import ImageEdit from "./ImageEdit";
 import PageList from "./PageList";
 import PageEdit from "./PageEdit";
@@ -13,12 +18,11 @@ import AddressList from "./AddressList";
 import authProvider from "./authProvider";
 import { AddressCreate } from "./AddressCreate";
 import { PageCreate } from "./PageCreate";
+import { ProductCreate } from "./ProductCreate";
+
 import { AddressEdit } from "./AddressEdit";
 import { ImageCreate } from "./ImageCreate";
 import { ParagraphCreate } from "./ParagraphCreate";
-import ProductList from './ProductList';
-import ProductEdit from './ProductEdit';
-import { ProductCreate } from './ProductCreate';
 
 const httpClient = (url: string, options: any = {}) => {
   if (!options.headers) {
@@ -60,14 +64,20 @@ const App = () => (
       edit={ParagraphEdit}
       create={ParagraphCreate}
     />
-    	<Resource
-			name='products'
-			list={ProductList}
-			edit={ProductEdit}
-			create={ProductCreate}
-		/>
-  </Admin>
 
+    <Resource
+      name="products"
+      list={ProductList}
+      edit={ProductEdit}
+      create={ProductCreate}
+    />
+
+    <Resource
+      name="productOrders"
+      list={ProductOrdersList}
+      edit={ProductOrdersEdit}
+    />
+  </Admin>
 );
 
 export default App;
