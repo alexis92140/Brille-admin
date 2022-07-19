@@ -6,6 +6,8 @@ import UserEdit from "./UserEdit";
 import ImageList from "./ImageList";
 import ProductList from "./ProductList";
 import ProductEdit from "./ProductEdit";
+import StatusList from "./StatusList";
+import StatusEdit from "./StatusEdit";
 import ProductOrdersList from "./ProductOrdersList";
 import ProductOrdersEdit from "./ProductOrdersEdit";
 import ImageEdit from "./ImageEdit";
@@ -19,6 +21,7 @@ import AddressList from "./AddressList";
 import authProvider from "./authProvider";
 import { AddressCreate } from "./AddressCreate";
 import { PageCreate } from "./PageCreate";
+import { StatusCreate } from "./StatusCreate";
 import { ProductCreate } from "./ProductCreate";
 import { AddressEdit } from "./AddressEdit";
 import { ImageCreate } from "./ImageCreate";
@@ -92,6 +95,12 @@ const App = () => (
       name="productorders"
       list={ProductOrdersList}
       edit={ProductOrdersEdit}
+    />
+    <Resource
+      name="status"
+      list={StatusList}
+      edit={StatusEdit}
+      create={StatusCreate}
     />
   </Admin>
 );
