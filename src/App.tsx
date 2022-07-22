@@ -13,8 +13,8 @@ import ProductOrdersEdit from "./ProductOrdersEdit";
 import ImageEdit from "./ImageEdit";
 import PageList from "./PageList";
 import PageEdit from "./PageEdit";
-import NewslettersList from './NewslettersList';
-import NewslettersCreate from './NewslettersCreate';
+import NewslettersList from "./NewslettersList";
+import NewslettersCreate from "./NewslettersCreate";
 import ParagraphList from "./ParagraphList";
 import { ParagraphEdit } from "./ParagraphEdit";
 import AddressList from "./AddressList";
@@ -44,7 +44,6 @@ const dataProvider = simpleRestProvider(
 );
 const App = () => (
   <Admin authProvider={authProvider} dataProvider={dataProvider}>
-
     <Resource name="users" list={UserList} edit={UserEdit} />
 
     <Resource
@@ -53,11 +52,11 @@ const App = () => (
       edit={AddressEdit}
       create={AddressCreate}
     />
-     <Resource 
-     name="newsletters" 
-     list={NewslettersList} 
-     create={NewslettersCreate}
-      />
+    <Resource
+      name="newsletters"
+      list={NewslettersList}
+      create={NewslettersCreate}
+    />
     <Resource
       name="pages"
       list={PageList}
@@ -77,12 +76,8 @@ const App = () => (
       edit={ParagraphEdit}
       create={ParagraphCreate}
     />
-   
-    <Resource 
-    name="orders" 
-    list={OrderList} 
-    edit={OrderEdit} 
-    />
+
+    <Resource name="orders" list={OrderList} edit={OrderEdit} />
 
     <Resource
       name="products"
