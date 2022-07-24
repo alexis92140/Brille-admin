@@ -19,9 +19,11 @@ const validatePage: Validator[] = [required(), maxLength(255)];
 export default interface IImage {
   image: string;
   idPage: number;
+  name: string;
 }
 
-const optionRenderer = (image: IImage) => `${image.image} ${image.idPage}`;
+const optionRenderer = (image: IImage) =>
+  `${image.image} ${image.idPage} ${image.name}`;
 
 export const ImageCreate = (props: ListProps) => (
   <Create
@@ -31,6 +33,7 @@ export const ImageCreate = (props: ListProps) => (
   >
     <SimpleForm warnWhenUnsavedChanges>
       <TextInput source="image" validate={validateImage} />
+      <TextInput source="name" allowEmpty />
       <TextInput source="idPage" validate={validatePage} />
       <ReferenceInput source="idImage" reference="images" allowEmpty>
         {/* Ceci permet de faire une liste déroulante qui va aller afficher le résultat de la fonction optionRenderer : firstname lastname */}
