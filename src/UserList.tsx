@@ -6,6 +6,7 @@ import {
   Identifier,
   List,
   ListProps,
+  DateField,
   NumberField,
   Record,
   TextField,
@@ -26,7 +27,7 @@ const UserList = (props: ListProps) => {
         <TextField source="lastname" />
         <TextField source="phone" />
         <EmailField source="email" />
-        <TextField source="created" />
+        <DateField source="created" />
         <TextField source="modified" />
         <BooleanNumField source="admin" />
       </Datagrid>

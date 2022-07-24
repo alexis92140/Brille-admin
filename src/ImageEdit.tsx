@@ -12,6 +12,7 @@ const ImageEdit = (props: ListProps) => (
     <SimpleForm>
       <NumberInput source="id" disabled />
       <TextInput source="image" />
+      <TextInput source="name" />
       <NumberInput source="admin" />
     </SimpleForm>
   </Edit>
