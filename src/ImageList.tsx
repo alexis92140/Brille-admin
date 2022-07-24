@@ -25,7 +25,6 @@ const ImageList = (props: ListProps) => {
         <NumberField sortBy="images.id" />
         <ImageField source="image" />
         <TextField source="name" />
-
         <BooleanNumField source="admin" />
       </Datagrid>
     </List>

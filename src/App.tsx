@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Admin, Resource, fetchUtils, EditGuesser } from "react-admin";
+import { Admin, Resource, fetchUtils } from "react-admin";
 import simpleRestProvider from "ra-data-simple-rest";
 import UserList from "./UserList";
 import UserEdit from "./UserEdit";
@@ -28,7 +28,15 @@ import { ImageCreate } from "./ImageCreate";
 import { ParagraphCreate } from "./ParagraphCreate";
 import OrderList from "./OrderList";
 import { OrderEdit } from "./OrderEdit";
-
+import PersonIcon from "@mui/icons-material/Person";
+import HomeIcon from "@mui/icons-material/Home";
+import ImageIcon from "@mui/icons-material/Image";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
+import MailIcon from "@mui/icons-material/Mail";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import PostAddIcon from "@mui/icons-material/PostAdd";
+import CreditCardIcon from "@mui/icons-material/CreditCard";
 const httpClient = (url: string, options: any = {}) => {
   if (!options.headers) {
     options.headers = new Headers({ Accept: "application/json" });
@@ -39,23 +47,25 @@ const httpClient = (url: string, options: any = {}) => {
 };
 
 const dataProvider = simpleRestProvider(
-  "http://localhost:8000/api",
+  "https://brille-handbags.herokuapp.com/api",
   httpClient
 );
 const App = () => (
   <Admin authProvider={authProvider} dataProvider={dataProvider}>
-    <Resource name="users" list={UserList} edit={UserEdit} />
+    <Resource name="users" list={UserList} edit={UserEdit} icon={PersonIcon} />
 
     <Resource
       name="addresses"
       list={AddressList}
       edit={AddressEdit}
       create={AddressCreate}
+      icon={HomeIcon}
     />
     <Resource
       name="newsletters"
       list={NewslettersList}
       create={NewslettersCreate}
+      icon={MailIcon}
     />
     <Resource
       name="pages"
@@ -68,6 +78,7 @@ const App = () => (
       list={ImageList}
       edit={ImageEdit}
       create={ImageCreate}
+      icon={ImageIcon}
     />
 
     <Resource
@@ -75,27 +86,36 @@ const App = () => (
       list={ParagraphList}
       edit={ParagraphEdit}
       create={ParagraphCreate}
+      icon={PostAddIcon}
     />
 
-    <Resource name="orders" list={OrderList} edit={OrderEdit} />
+    <Resource
+      name="orders"
+      list={OrderList}
+      edit={OrderEdit}
+      icon={ShoppingBasketIcon}
+    />
 
     <Resource
       name="products"
       list={ProductList}
       edit={ProductEdit}
       create={ProductCreate}
+      icon={AddPhotoAlternateIcon}
     />
 
     <Resource
       name="productorders"
       list={ProductOrdersList}
       edit={ProductOrdersEdit}
+      icon={CreditCardIcon}
     />
     <Resource
       name="status"
       list={StatusList}
       edit={StatusEdit}
       create={StatusCreate}
+      icon={LocalShippingIcon}
     />
   </Admin>
 );
