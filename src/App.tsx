@@ -38,12 +38,12 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import PostAddIcon from "@mui/icons-material/PostAdd";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 const httpClient = (url: string, options: any = {}) => {
-  if (!options.headers) {
-    options.headers = new Headers({ Accept: "application/json" });
-  }
-  const { token } = JSON.parse(localStorage.getItem("auth") || "");
-  options.headers.set("Authorization", `${token}`);
-  return fetchUtils.fetchJson(url, options);
+	if (!options.headers) {
+		options.headers = new Headers({ Accept: 'application/json' });
+	}
+	const { token } = JSON.parse(localStorage.getItem('auth') || '');
+	options.headers.set('Authorization', `${token}`);
+	return fetchUtils.fetchJson(url, options);
 };
 
 const dataProvider = simpleRestProvider(
