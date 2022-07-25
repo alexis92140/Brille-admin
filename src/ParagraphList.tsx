@@ -1,20 +1,11 @@
 import {
-  BooleanField,
   Datagrid,
-  EmailField,
-  FunctionField,
-  Identifier,
+  EditButton,
   List,
   ListProps,
   NumberField,
   TextField,
 } from "react-admin";
-import BooleanNumField from "./BooleanNumField.jsx";
-
-type recordType = {
-  admin: boolean;
-  id?: Identifier | undefined;
-};
 
 const ParagraphList = (props: ListProps) => {
   return (
@@ -23,7 +14,7 @@ const ParagraphList = (props: ListProps) => {
         <NumberField sortBy="paragraph.id" />
         <TextField source="title" />
         <TextField source="description" />
-        <BooleanNumField source="admin" />
+        <EditButton />;
       </Datagrid>
     </List>
   );
