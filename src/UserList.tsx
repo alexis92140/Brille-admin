@@ -1,18 +1,14 @@
 import {
-  BooleanField,
   Datagrid,
   EmailField,
-  FunctionField,
   Identifier,
   List,
   ListProps,
   DateField,
-  NumberField,
-  Record,
+  ShowButton,
   TextField,
 } from "react-admin";
 import BooleanNumField from "./BooleanNumField.jsx";
-
 type recordType = {
   admin: boolean;
   id?: Identifier | undefined;
@@ -22,14 +18,12 @@ const UserList = (props: ListProps) => {
   return (
     <List {...props}>
       <Datagrid rowClick="edit">
-        <NumberField source="id" sortBy="users.id" />
         <TextField source="firstname" />
         <TextField source="lastname" />
-        <TextField source="phone" />
         <EmailField source="email" />
         <DateField source="created" />
-        <TextField source="modified" />
         <BooleanNumField source="admin" />
+        <ShowButton />
       </Datagrid>
     </List>
   );
